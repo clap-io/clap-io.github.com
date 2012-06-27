@@ -1,0 +1,120 @@
+body
+	font-family 'Josefin Sans', sans-serif
+
+ul, p, a
+	font-size 1em
+	color white
+	text-shadow: 0px 0px 3px rgba(0,0,0,1)
+
+li
+	color white
+
+.white .state-background
+	background white
+
+	ul, p, a
+		color rgba(0,0,0,.7)
+	li
+		color rgba(0,0,0,.7)
+
+.circle_container
+	position relative
+
+	li.circle
+		top 0
+		left 0
+		position absolute
+
+		&:nth-child(1)
+			left -52px
+			top -150px
+
+		&:nth-child(2)
+			left -160px
+			top -20px
+
+		&:nth-child(3)
+			left -138px
+			top 148px
+
+		&:nth-child(4)
+			left 0
+			top 250px
+
+	.info
+		cursor pointer
+
+		&:hover
+			z-index 9999
+			
+			.circle
+				border 1px solid rgba(0,0,0,0.8)
+
+			.more_info
+				//opacity 1
+				display block
+
+	.info_container
+		position relative
+		margin-left 600px
+		top 150px
+
+		.info 
+			position absolute
+
+	.circle
+		r = 120px
+		border 1px solid rgba(0,0,0,0.2)
+		border-radius r
+		box-sizing border-box
+		display block
+		height r * 2
+		padding-top @height * .5 - 30px
+		text-align center
+		transition all 250ms linear
+		width @height
+
+	.more_info
+		display none
+		transition all 600ms linear
+
+		.circle
+			r = 80px
+			border-radius r
+			box-sizing border-box
+			display block
+			height r * 2
+			padding-top @height * .5 - 30px
+			text-align center
+			transition all 250ms linear
+			width @height
+
+
+	#investigacion
+		top 50px
+		left 0
+		position absolute
+
+		.circle
+			background-color rgba(255,255,255,.7)
+
+	#estrategia
+		margin-left -200px
+		margin-top -120px
+		z-index 1
+
+		.circle
+			background-color rgba(0,255,0,.7)
+
+	#diseno
+		margin-top -120px
+
+		.circle
+			background-color rgba(0,0,255,.7)
+
+	#desarrollo
+		margin-top 30px
+		margin-left -100px
+
+		.circle
+			background-color rgba(255,0,0,.7)

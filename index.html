@@ -1,69 +1,361 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>clap.io</title>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Clap-io.github.com : slides" />
+		<meta name="description" content="Presentación clap.io">
+		<meta name="author" content="Hakim El Hattab">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/main.css">
 
-    <title>Clap-io.github.com</title>
-  </head>
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
 
-  <body>
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Implementación de un cluster para aplicaciones cloud</h1>
+					<h3 class="inverted">
+						Juan Pablo Pinilla Ossa <br>
+						Bryan Garzón Bahamón
+					</h3>
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Introducción</h2>
+						<ul>
+							<li>¿Que es cluster?
+								<ul>
+									<li>HPC</li>
+									<li>HA</li>
+									<li>load balancer</li>
+								</ul>
+							</li>
+							<li>¿Que es cloud computing?</li>
+							<li>Ventajas</li>
+						</ul>
+					</section>
+					<section data-state="white">
+						<h2>
+							Cloud computing en la actualidad
+						</h2>
+						<img src="assets/img/amazon-cloud.png" alt="imagen servicios cloud computing">
+						<p>
+							Fuente:
+							<i><a href=" http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg"> http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg</a></small></i>
+						</p>
+					</section>
+				</section>
+				
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Problema</h2>
+						<ul>
+							<li>Accesibilidad a los cluster</li>
+							<li>Poder de computo que se pierde con el paso a cloud</li>
+							<li>Por qué y para que cloud computing</li>
+						</ul>
+						<!--<p>
+							Los usuarios finales no tienen acceso a un cluster, el cual proporcione el nivel de procesamiento que estos demanden y este acceso generalmente es costo.
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/clap-io">View on GitHub</a>
+							Los servicios actuales de cloud computing ofrecen muchas ventajas, pero una de sus principales falencias es ofrecer al usuario final la capacidad de ejecutar procesos utilizando la capacidad de procesamiento del cloud.
+							
+							<a href="#/2/1">down</a>.
+						</p>-->
+						
+					</section>
+					<section>
+						<h2>Porque usar cloud</h2>
+						<ul>
+							<li>Velocidades de conexion</li>
+							<li>Cualquier persona puede ingresar</li>
+						</ul>
+					</section>
+				</section>
 
-          <h1 id="project_title">Clap-io.github.com</h1>
-          <h2 id="project_tagline">slides</h2>
+				<section>
+					<h2>¿Como lo hicimos?</h2>
+					<div class="circle_container">
+						<div id="investigacion" class="info">
+							<span class="circle">
+								Investigación
+							</span>
+							<ul class="more_info">
+								<li class="circle">Cluster</li>
+								<li class="circle">Cloud</li>
+								<li class="circle">PaaS</li>
+								<li class="circle">?</li>
+							</ul>
+						</div>
+						<div class="info_container">
+							<div id="estrategia" class="info">
+								<span class="circle">
+									Estratégia
+								</span>
+								<ul class="more_info">
+									<li class="circle">Usuario</li>
+									<li class="circle">PaaS?</li>
+									<li class="circle">Ventajas</li>
+								</ul>
+							</div>
+							<div id="diseno" class="info">
+								<span class="circle">
+									Diseño
+								</span>
+								<ul class="more_info">
+									<li class="circle">Responsive</li>
+									<li class="circle">Mockups</li>
+								</ul>
+							</div>
+							<div id="desarrollo" class="info">
+								<span class="circle">
+									Desarrollo	
+								</span>
+								<ul class="more_info">
+									<li class="circle">Front-end</li>
+									<li class="circle">Back-end</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section> 
 
-        </header>
-    </div>
+				<section data-state="white">
+					<img src="assets/img/clapio.png" alt="clap.io" width="500" height="204">
+				</section>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+				<section>
+				
+					<h2>Que ofrecemos</h2>
+					<ul>
+						<li>
+							<p>
+								Una plataforma<span> HPC Cloud </span>(High Performance Computing Cloud)
+							</p>
+						</li>
+						
+						<li>
+							<p>
+								<span class="important">Ingresar desde donde sea</span>
+						(Ingresar desde cualquier lugar o cualquier tipo dispositivo).
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="important">Poder Ilimitado</span>
+	(Mayor velocidad de procesamiento, dependiendo del numero de maquinas).
+							</p>
+						</li>
+						<li>
+							<i>"Just works"</i>
+						</li>
+					</ul>
+				</section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+				<section data-state="white">
+					<h2>¿Como funciona?</h2>
+					<img src="" alt="dibujito">
+				</section>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+				<section>
+					<h2>Componentes</h2>
+					<ul>
+						<li>
+							<span>haibu</span>
+							<p>Manejo de muchas aplicaciones nodejs en un solo servidor.</p>
+						</li>
+						<li>
+							<span>mdns</span>
+							<p>Multicast DNS es una forma facil de ayudar a los dispositivos de red a encontrar a cada dispositivo de la misma sin ninguna configuración</p>
+						</li>
+						<li>
+							<span>node-http-proxy</span>
+							<p>Despliegue de multiples servidores de aplicaciones http</p>
+						</li>
+					</ul>
+				</section>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+				<section>
+					<h2>Modelos</h2>
+					<ul>
+						<li>MVP <span>(front-end)</span></li>
+						<li>Async programming <span>(back-end)</span></li>
+					</ul>
+				</section>
 
-<h3>Designer Templates</h3>
+				<section data-state="white">
+					<h2>MVP front-end</h2>
+					<img src="assets/img/mvp.png" alt="diseño MVP">
+					<p>Fuente: <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">http://blog.nodejitsu.com/scaling-isomorphic-javascript-code</a> </p>
+					
+				</section>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+				<section data-state="white">
+					<h3>Node.js</h3>
+					<img src="http://flopezlla.info/images/nodejs.png" alt="nodejs image">
+					<p>Plataforma creada con el motor de javascript de chrome. Para la creación facil, rapida, escalable de aplicaciones web. </p>
+				</section>
 
-<h3>Rather Drive Stick?</h3>
+				<section>
+					<h2>
+						Prueba de  
+						<span>
+							Clap.io
+						</span>
+					</h2>
+					<p>
+						repositorio en github
+						<ul>
+							<li>
+								https://github.com/gotik/clap.io-hello
+							</li>
+						</ul>
+					</p>
+				</section>
+				
+				<section id="devices" data-state="white">
+					<div class="deviceWrap iphone-portrait">
+						<div class="device" style="width: 320px;height: 464px;padding-top: 11px;">
+							<div class="flashingTop" style="height: 20px; width: 320px">
+								<!--<span class="time">12:11 <span>PM</span></span>-->
+							</div>
+							<iframe src="http://www.kamikazepanda.com" id="iphone-portrait" style=""></iframe>
+						</div><!-- /device -->
+					</div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+					<script>
 
-<h3>Authors and Contributors</h3>
+					</script>
+				</section>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+				<section>
+					<h2>
+						Ventajas
+					</h2>
+					<ul>
+						<li>Accesibilidad</li>
+						<li class="fragment">Libre</li>
+						<li class="fragment">Mejoras en rendimiento.</li>
+						<li class="fragment">Mejoras en tiempo de ejecución.</li>
+						<li class="fragment">Facil de usar.</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>
+						Posible uso
+					</h2>
+					<img src="assets/img/googlex.png" alt="red neuronal google x articulo" style="width:max-width; height:450px">
+					<p>Fuente:<a href="http://rtunoticias.com/index.php/mundo/ciencia-y-tecnologia/16576-red-neural-virtual-de-google-x-aprendio-a-reconocer-un-gato-sin-que-se-lo-ensenaran"> http://rtunoticias.com/index.php/mundo/ciencia-y-tecnologia/16576-red-neural-virtual-de-google-x-aprendio-a-reconocer-un-gato-sin-que-se-lo-ensenaran</a></p>
+				</section>
+				
+				<section>
+					<h2>Bibliografia</h2>
+					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
+						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
+					</a>
+				</section>
+				
+				<section>
+					<h2>Links importantes</h2>
+					<ul>
+						<li><a href="https://github.com/gotik">Codigo fuente en github</a></li>
+						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>THE END</h1>
+					<h3 class="inverted">BY <br>Juan Pablo Pinilla / Bryan Garzón Bahamón</h3>
+				</section>
+			</div>
 
-<h3>Support or Contact</h3>
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
 
-    
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
 
-  </body>
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: false,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
 </html>
