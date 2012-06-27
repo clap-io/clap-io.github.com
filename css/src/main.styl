@@ -48,7 +48,8 @@ li
 			z-index 9999
 			
 			.circle
-				border 1px solid rgba(0,0,0,0.8)
+				//border 1px solid rgba(0,0,0,0.8)
+				box-shadow: 0px 0px 12px white
 
 			.more_info
 				//opacity 1
@@ -71,12 +72,12 @@ li
 		height r * 2
 		padding-top @height * .5 - 30px
 		text-align center
-		transition all 250ms linear
+		transition all 200ms linear
 		width @height
 
 	.more_info
 		display none
-		transition all 600ms linear
+		//transition all 600ms linear
 
 		.circle
 			r = 80px
