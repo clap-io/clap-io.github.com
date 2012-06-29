@@ -239,13 +239,14 @@
 					</p>
 				</section>
 				
+					
 				<section id="devices" data-state="white">
 					<div class="deviceWrap iphone-portrait">
-						<div class="device" style="width: 320px;height: 464px;padding-top: 11px;">
+						<div class="device" style="width: 320px;height: 464px;padding-top: 11px;background-color:white;">
 							<div class="flashingTop" style="height: 20px; width: 320px">
 								<!--<span class="time">12:11 <span>PM</span></span>-->
 							</div>
-							<iframe src="http://clap.io" id="iphone-portrait" style="width:307px;height: 464px;" width="307" height="464"></iframe>
+							<iframe src="http://clap.io" id="iphone-portrait" style="width:307px;height:464px;" width="307" height="464"></iframe>
 						</div><!-- /device -->
 					</div>
 
@@ -303,6 +304,18 @@
 			<div class="progress"><span></span></div>
 			
 		</div>
+
+		<input id="url" type="text" value="http://clap.io" required>
+
+		<script>
+			var url_input = document.querySelector('#url')
+			url_input.addEventListener('click', function() {
+				this.style.width = "48%"
+			})
+			url_input.addEventListener('change', function() {
+				document.querySelector('#iphone-portrait').setAttribute('src', this.value)
+			})			
+		</script>
 
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/highlight.js"></script>
