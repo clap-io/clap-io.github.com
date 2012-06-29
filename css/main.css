@@ -1022,8 +1022,8 @@ input#url {
   -webkit-transition: all 600ms linear;
   -moz-transition: all 600ms linear;
   transition: all 600ms linear;
-  top: 30px;
-  left: 30px;
+  top: 115px;
+  left: 350px;
   z-index: 99999;
   width: 0;
 }
