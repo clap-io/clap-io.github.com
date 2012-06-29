@@ -245,7 +245,7 @@
 
 						<div class="bottom">
 						</div>
-						<input id="url" type="text" value="http://clap.io" required>
+						<input id="url" type="text" value="http://google.com" required>
 						<div class="device" style="width: 320px;height: 464px;padding-top: 11px;background-color:white;">
 							<div class="flashingTop" style="height: 20px; width: 320px">
 								<!--<span class="time">12:11 <span>PM</span></span>-->
@@ -321,6 +321,7 @@
 			})
 			url_input.addEventListener('change', function() {
 				document.querySelector('#iphone-portrait').setAttribute('src', this.value);
+				alert(document.querySelector('#iphone-portrait').getAttribute('src'));
 				this.style.display="none";
 			})			
 		</script>
