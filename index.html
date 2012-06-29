@@ -239,9 +239,13 @@
 					</p>
 				</section>
 				
-					
+				
 				<section id="devices" data-state="white">
 					<div class="deviceWrap iphone-portrait">
+
+						<div class="bottom">
+						</div>
+						<input id="url" type="text" value="http://clap.io" required>
 						<div class="device" style="width: 320px;height: 464px;padding-top: 11px;background-color:white;">
 							<div class="flashingTop" style="height: 20px; width: 320px">
 								<!--<span class="time">12:11 <span>PM</span></span>-->
@@ -306,15 +310,18 @@
 			
 		</div>
 
-		<input id="url" type="text" value="http://clap.io" required>
+		
 
 		<script>
-			var url_input = document.querySelector('#url')
-			url_input.addEventListener('click', function() {
-				this.style.width = "48%"
+			var url_input = document.querySelector('#url'),
+				bottom = document.querySelector('.bottom');
+			bottom.addEventListener('click', function() {
+				url_input.style.display = "block";
+				url_input.style.width = "48%";
 			})
 			url_input.addEventListener('change', function() {
-				document.querySelector('#iphone-portrait').setAttribute('src', this.value)
+				document.querySelector('#iphone-portrait').setAttribute('src', this.value);
+				this.style.display="none";
 			})			
 		</script>
 
