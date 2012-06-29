@@ -42,7 +42,6 @@
 				</section>
 				
 				<section>
-					<section>
 						<h2>Introducción</h2>
 						<ul>
 							<li>Cluster de computadoras</li>
@@ -51,17 +50,6 @@
 							<li>Plataforma como un servicio (PaaS)</li>
 							<li>* Cluster como servicio cloud *</li>
 						</ul>
-					</section>
-					<section data-state="white">
-						<h2>
-							Cloud computing en la actualidad
-						</h2>
-						<img src="assets/img/amazon-cloud.png" alt="imagen servicios cloud computing">
-						<p>
-							Fuente:
-							<i><a href=" http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg"> http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg</a></small></i>
-						</p>
-					</section>
 				</section>
 				
 				<!-- Example of nested vertical slides -->
@@ -166,6 +154,16 @@
 							</li>
 						</ul>
 					</section>
+					<section data-state="white">
+						<h2>
+							Cloud computing en la actualidad
+						</h2>
+						<img src="assets/img/amazon-cloud.png" alt="imagen servicios cloud computing">
+						<p>
+							Fuente:
+							<i><a href=" http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg"> http://www.tecnoquo.com/wp-content/uploads/2011/04/amazon-cloud.jpg</a></small></i>
+						</p>
+					</section>
 					<section>
 						<h2>PaaS</h2>
 						<p>
@@ -248,7 +246,7 @@
 				<section>
 					<h2>Modelos</h2>
 					<ul>
-						<li>MVP <span>(front-end)</span></li>
+						<li>* MVP <span>(front-end)</span></li>
 						<li>Async programming <span>(back-end)</span></li>
 					</ul>
 				</section>
@@ -258,6 +256,14 @@
 					<img src="assets/img/mvp.png" alt="diseño MVP">
 					<p>Fuente: <a href="http://blog.nodejitsu.com/scaling-isomorphic-javascript-code">http://blog.nodejitsu.com/scaling-isomorphic-javascript-code</a> </p>
 					
+				</section>
+
+				<section>
+					<h2>Modelos</h2>
+					<ul>
+						<li>MVP <span>(front-end)</span></li>
+						<li>* Async programming <span>(back-end)</span></li>
+					</ul>
 				</section>
 
 				<section>
@@ -299,9 +305,7 @@
 						</div><!-- /device -->
 					</div>
 
-					<script>
-
-					</script>
+					<a href="https://github.com/gotik/clap.io-hello">https://github.com/gotik/clap.io-hello</a>
 				</section>
 
 				<section>
@@ -382,8 +386,9 @@
 				</section>
 				
 				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY <br>Juan Pablo Pinilla / Bryan Garzón Bahamón</h3>
+					<h1>GRACIAS</h1>
+					<h3 class="inverted"><br>Juan Pablo Pinilla Ossa<br>Bryan Garzón Bahamón</h3>
+					<p>we <img src="https://secure.gravatar.com/avatar/f7c22d1b52c42bd01c96cb9fa265e8c6?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-orgs.png" width="50"> apps</p>
 				</section>
 			</div>
 
@@ -405,10 +410,17 @@
 		<script>
 			var url_input = document.querySelector('#url'),
 				bottom = document.querySelector('.bottom')
-				bool = true;
+				bool = false;
 			bottom.addEventListener('click', function() {
-				url_input.style.display = "block";
-				url_input.style.width = "29.5%";
+				if(bool === false){
+					url_input.style.display = "block";
+					url_input.style.width = "29.5%";
+					bool = true;
+				}else{
+					bool = false;
+					url_input.style.display="none";
+				}
+
 			})
 			url_input.addEventListener('change', function() {
 				document.querySelector('#iphone-portrait').setAttribute('src', this.value);
