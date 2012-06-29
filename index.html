@@ -46,11 +46,6 @@
 						<h2>Introducción</h2>
 						<ul>
 							<li>¿Que es cluster?
-								<ul>
-									<li>HPC</li>
-									<li>HA</li>
-									<li>Load Balancing</li>
-								</ul>
 							</li>
 							<li>¿Qué es cloud computing?</li>
 							<li>Ventajas</li>
@@ -69,22 +64,84 @@
 				</section>
 				
 				<!-- Example of nested vertical slides -->
+				
+				<section>
+					<h2>Problema</h2>
+					<ul>
+						<li>Accesibilidad a los cluster</li>
+						<li>Complejidad de los cluster</li>
+						<li>Poder de computo que se pierde con el paso a cloud</li>
+					</ul>
+					<!--<p>
+						Los usuarios finales no tienen acceso a un cluster, el cual proporcione el nivel de procesamiento que estos demanden y este acceso generalmente es costo.
+
+						Los servicios actuales de cloud computing ofrecen muchas ventajas, pero una de sus principales falencias es ofrecer al usuario final la capacidad de ejecutar procesos utilizando la capacidad de procesamiento del cloud.
+						
+						<a href="#/2/1">down</a>.
+					</p>-->
+					
+				</section>
+				
+			
+
+				<section data-state="white">
+					<img src="assets/img/clapio.png" alt="clap.io" width="500" height="204">
+				</section>
 				<section>
 					<section>
-						<h2>Problema</h2>
+						<h2>¿Cómo lo hicimos?</h2>
+						<div class="circle_container">
+							<div id="investigacion" class="info">
+								<span class="circle">
+									Investigación
+								</span>
+								<ul class="more_info">
+									<li class="circle">Cluster</li>
+									<li class="circle">Cloud</li>
+									<li class="circle">PaaS</li>
+									<li class="circle">?</li>
+								</ul>
+							</div>
+							<div class="info_container">
+								<div id="estrategia" class="info">
+									<span class="circle">
+										Estratégia
+									</span>
+									<ul class="more_info">
+										<li class="circle">Usuario</li>
+										<li class="circle">PaaS?</li>
+										<li class="circle">Ventajas</li>
+									</ul>
+								</div>
+								<div id="diseno" class="info">
+									<span class="circle">
+										Diseño
+									</span>
+									<ul class="more_info">
+										<li class="circle">Responsive</li>
+										<li class="circle">Wireframes</li>
+										<li class="circle">"Diseño"</li>
+									</ul>
+								</div>
+								<div id="desarrollo" class="info">
+									<span class="circle">
+										Desarrollo	
+									</span>
+									<ul class="more_info">
+										<li class="circle">Frontend</li>
+										<li class="circle">Backend</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section> 
+					<section>
+						<h2>Cluster</h2>
 						<ul>
-							<li>Accesibilidad a los cluster</li>
-							<li>Poder de computo que se pierde con el paso a cloud</li>
-							<li>Por qué y para que cloud computing</li>
+							<li>HPC</li>
+							<li>HA</li>
+							<li>Load Balancing</li>
 						</ul>
-						<!--<p>
-							Los usuarios finales no tienen acceso a un cluster, el cual proporcione el nivel de procesamiento que estos demanden y este acceso generalmente es costo.
-
-							Los servicios actuales de cloud computing ofrecen muchas ventajas, pero una de sus principales falencias es ofrecer al usuario final la capacidad de ejecutar procesos utilizando la capacidad de procesamiento del cloud.
-							
-							<a href="#/2/1">down</a>.
-						</p>-->
-						
 					</section>
 					<section>
 						<h2>¿Por qué usar cloud?</h2>
@@ -99,62 +156,10 @@
 									<li>laptops</li>
 								</ul>
 							</li>
-
 						</ul>
 					</section>
 				</section>
-
-				<section data-state="white">
-					<img src="assets/img/clapio.png" alt="clap.io" width="500" height="204">
-				</section>
-
-				<section>
-					<h2>¿Cómo lo hicimos?</h2>
-					<div class="circle_container">
-						<div id="investigacion" class="info">
-							<span class="circle">
-								Investigación
-							</span>
-							<ul class="more_info">
-								<li class="circle">Cluster</li>
-								<li class="circle">Cloud</li>
-								<li class="circle">PaaS</li>
-								<li class="circle">?</li>
-							</ul>
-						</div>
-						<div class="info_container">
-							<div id="estrategia" class="info">
-								<span class="circle">
-									Estratégia
-								</span>
-								<ul class="more_info">
-									<li class="circle">Usuario</li>
-									<li class="circle">PaaS?</li>
-									<li class="circle">Ventajas</li>
-								</ul>
-							</div>
-							<div id="diseno" class="info">
-								<span class="circle">
-									Diseño
-								</span>
-								<ul class="more_info">
-									<li class="circle">Responsive</li>
-									<li class="circle">Wireframes</li>
-									<li class="circle">"Diseño"</li>
-								</ul>
-							</div>
-							<div id="desarrollo" class="info">
-								<span class="circle">
-									Desarrollo	
-								</span>
-								<ul class="more_info">
-									<li class="circle">Frontend</li>
-									<li class="circle">Backend</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section> 
+				
 
 				<section>
 				
@@ -294,13 +299,13 @@
 					<h2>Conclusiones</h2>
 					<ul>
 						<li>
-							Se obtuvo como resultado la plataforma clap.io que permite distribuir aplicaciones en cluster empleando el concepto de computación en nube.
+							Se obtuvo como resultado la plataforma clap.io que permite distribuir aplicaciones en cluster empleando el concepto de computación en nube.
 						</li>
 						<li>
-							Con la aplicación básica de pruebas “clap.io-hello” se demuestra matemáticamente que ésta, desplegada en clap.io, obtiene mejores resultados de computo.
+							Con la aplicación básica de pruebas “clap.io-hello” se demuestra matemáticamente que ésta, desplegada en clap.io, obtiene mejores resultados de computo.
 						</li>
 						<li>
-							Para lograr una comunicación transparente entre dispositivos, sin importar su sistema operativo, es necesario abstraer la comunicación entre los mismos empleando el protocolo DNS.
+							Para lograr una comunicación transparente entre dispositivos, sin importar su sistema operativo, es necesario abstraer la comunicación entre los mismos empleando el protocolo DNS.
 						</li>
 					</ul>
 				</section>
@@ -308,7 +313,7 @@
 				<section>
 					<h2>Conclusiones</h2>
 					<ul>
-						<li>Plataformas por el estilo de clap.io son un paso más hacia la idea original de la computación en nube en la que no solamente se tiene acceso a todos los archivos sino ahora también a mayores capacidades de procesamiento que las que se tenían en estaciones de trabajo.</li>
+						<li>Plataformas por el estilo de clap.io son un paso más hacia la idea original de la computación en nube en la que no solamente se tiene acceso a todos los archivos sino ahora también a mayores capacidades de procesamiento que las que se tenían en estaciones de trabajo.</li>
 					</ul>
 				</section>
 
@@ -316,10 +321,10 @@
 					<h2>Recomendaciones</h2>
 					<ul>
 						<li>
-							Con el fin de lograr una mayor comodidad para el administrador de la plataforma se recomiendo crear un módulo con el estado de las maquinas que permita interacción con las mismas tal como lo es el apagado y encendido de las mismas.
+							Con el fin de lograr una mayor comodidad para el administrador de la plataforma se recomiendo crear un módulo con el estado de las maquinas que permita interacción con las mismas tal como lo es el apagado y encendido de las mismas.
 						</li>
 						<li>
-							Para obtener una mejor distribución de las aplicaciones que se desplieguen en clap.io es necesario remplazar el round robin por un algoritmo que mida procesamiento, memoria y capacidad en general de las máquinas para tomar la mejor decisión.
+							Para obtener una mejor distribución de las aplicaciones que se desplieguen en clap.io es necesario remplazar el round robin por un algoritmo que mida procesamiento, memoria y capacidad en general de las máquinas para tomar la mejor decisión.
 						</li>
 					</ul>
 				</section>
@@ -357,7 +362,8 @@
 
 		<script>
 			var url_input = document.querySelector('#url'),
-				bottom = document.querySelector('.bottom');
+				bottom = document.querySelector('.bottom')
+				bool = true;
 			bottom.addEventListener('click', function() {
 				url_input.style.display = "block";
 				url_input.style.width = "29.5%";
